@@ -17,9 +17,6 @@ env:
   WALL_API_KEY: ${{secrets.WALL_API}}
   PYRO_SESSION: ${{secrets.PYRO_SESSION}}
     
-
-
-
 jobs:
   build-linux:
     runs-on: ubuntu-latest
