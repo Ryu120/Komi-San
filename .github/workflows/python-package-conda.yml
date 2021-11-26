@@ -1,6 +1,24 @@
-name: Python Package using Conda
+name : komi
 
-on: [push]
+
+on:
+    schedule:
+      - cron: "0 */6 * * *"
+    push:
+      branches: [ master ]
+      
+env:
+  API_ID: ${{secrets.API_ID}}
+  API_HASH: ${{secrets.API_HASH}}
+  BOT_TOKEN: ${{secrets.BOT_TOKEN}}
+  MONGO_URL: ${{secrets.MONGO_URL}}
+  REDIS_URL: ${{secrets.REDIS_URL}}
+  SQL_URL: ${{secrets.SQL_URL}}
+  WALL_API_KEY: ${{secrets.WALL_API}}
+  PYRO_SESSION: ${{secrets.PYRO_SESSION}}
+    
+
+
 
 jobs:
   build-linux:
