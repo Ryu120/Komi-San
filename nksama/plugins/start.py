@@ -8,7 +8,7 @@ from nksama import help_message
 
 
 
-@bot.on_message(filters.command('start') | filters.command('start@KomiSanRobot'))
+@bot.on_message(filters.command('start') | filters.command('start@FlameXbot'))
 def start(_,message):
     try:
         if message.chat.type == "private":
@@ -36,7 +36,7 @@ def start(_,message):
     
     if message.chat.type == "private" and not "help" in message.text:
 
-        bot.send_message(message.chat.id , "Hello there i'm Komi-San\nI'll help you to manage your groups" , reply_markup=InlineKeyboardMarkup([ 
+        bot.send_message(message.chat.id , "Hello there I'm Rengoku\nI'll help you to manage your groups" , reply_markup=InlineKeyboardMarkup([ 
             [InlineKeyboardButton('help' , callback_data="help")]
         ]))
     if "help" in message.text:
